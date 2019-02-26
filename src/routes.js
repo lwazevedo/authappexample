@@ -1,6 +1,8 @@
 import React from 'react';
 import { BrowserRouter, Route, Switch, Redirect } from 'react-router-dom';
-import { isAuthenticated } from './auth';
+import { isAuthenticated, isRole } from './auth';
+import Login from './components/login';
+import Home from './components/home';
 
 const PrivateRoute = ({ component: Component, ...rest }) => (
   <Route
@@ -23,8 +25,8 @@ const PrivateRoute = ({ component: Component, ...rest }) => (
 const Routes = () => (
   <BrowserRouter>
     <Switch>
-      <Route exact path='/' component={() => <h1>Hello word</h1>} />
-      <PrivateRoute path='/app' component={() => <h1>VocÊ está logado</h1>} />
+      <Route exact path='/' component={Login} />
+      { isRole().includes('home') && <PrivateRoute path='/app' component={Home} />}
     </Switch>
   </BrowserRouter>
 );
