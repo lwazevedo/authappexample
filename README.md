@@ -1,6 +1,6 @@
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
-This project contaisn four examples of login with react and react-router. The master
+This project contains four examples of login with react and react-router. The master
 version is using the fourth example as default, in this example i work with the react hooks.
 
 To check other examples, acess the sample branchs.
