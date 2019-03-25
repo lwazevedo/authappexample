@@ -9,6 +9,7 @@ const Dashboard = props => {
   const autLogout = () => {
     authService.singIn().then(() => {
       setAuthenticated(false);
+      localStorage.clear();
       props.history.push('/');
     });
   };
