@@ -1,32 +1,29 @@
 import React, { useContext, useEffect, useState } from 'react';
 import { withRouter } from 'react-router-dom';
 
+import { SignIn } from '../../components';
 import { AuthContext } from '../index';
+
 import authService from '../../services/authService';
 
 const AuthPage = props => {
-  const [isLoading, setLoading] = useState();
+  const [isLoading, setLoading] = useState(false);
   const { setAuthenticated, authenticated } = useContext(AuthContext);
 
   useEffect(() => {
     if (!isLoading && authenticated) props.history.push('/home');
   });
 
-  const authIn = () => {
+  const authIn = userData => {
     setLoading(true);
-    authService.singIn().then(() => {
+    authService.singIn(userData).then(() => {
       setAuthenticated(true);
       setLoading(false);
       props.history.push('/home');
     });
   };
 
-  return (
-    <>
-      <button onClick={authIn}>SingIn</button>
-      {isLoading && <span>Loading</span>}
-    </>
-  );
+  return <SignIn authIn={authIn} isLoading={isLoading} />;
 };
 
 export default withRouter(AuthPage);

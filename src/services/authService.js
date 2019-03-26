@@ -1,15 +1,9 @@
 class AuthService {
-  static singIn() {
+  static singIn(userData) {
     return new Promise((resolve, reject) => {
       setTimeout(() => {
         window.localStorage.setItem('authenticated', true);
-        window.localStorage.setItem(
-          'authBody',
-          JSON.stringify({
-            username: 'Teste Auth',
-            Type: 'React Hooks'
-          })
-        );
+        window.localStorage.setItem('authBody', JSON.stringify({ userData }));
         resolve();
       }, 2000);
     });

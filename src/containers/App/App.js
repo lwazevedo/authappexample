@@ -4,14 +4,16 @@ import './App.css';
 
 import { Routes } from '../index';
 
-import { AuthProvider } from '../index';
+import { AuthProvider, LayoutMaterialProvider } from '../index';
 
 const App = () => {
   return (
     <Router>
-      <AuthProvider>
-        <Routes />
-      </AuthProvider>
+      <LayoutMaterialProvider>
+        <AuthProvider>
+          <Routes />
+        </AuthProvider>
+      </LayoutMaterialProvider>
     </Router>
   );
 };
