@@ -5,13 +5,11 @@ version is using the example04_hooks as default, in this example i work with the
 
 ## To check other examples, acess the sample branchs.
 
-```
 1. example01 -> This example uses a simple private router component
 2. example02 -> This example is based on react api context
 3. example03 -> This example is based on [React Router](https://reacttraining.com/react-router/web/example/auth-workflow)
 4. example04_hooks -> This example is based on [React Hooks](https://reactjs.org/docs/hooks-intro.html)
 5. react-material-ui -> This example is based on branch master and contais template [Material UI](https://material-ui.com/)
-```
 
 ## To use the branch's follow the steps below:
 
