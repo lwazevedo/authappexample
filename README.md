@@ -1,10 +1,19 @@
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
 This project contains four examples of login with react and react-router. The master
-version is using the fourth example as default, in this example i work with the react hooks.
+version is using the example04_hooks as default, in this example i work with the react hooks.
 
-To check other examples, acess the sample branchs.
+## To check other examples, acess the sample branchs.
 
+`example01 -> This example uses a simple private router component example02 -> This example is based on react api context example03 -> This example is based on https://reacttraining.com/react-router/web/example/auth-workflow example04_hooks -> This example is based on https://reactjs.org/docs/hooks-intro.html react-material-ui -> This example is based on branch master and contais template https://material-ui.com/`
+
+## To use the branch's follow the steps below:
+
+`1 - Clone the project 2 - run -> git checkout (name_branch) 3 - run -> npm i 4 - run -> npm run start`
+
+## or use branch master
+
+`1 - Clone the project 2 - run -> npm i 3 - run -> npm run start`
 
 ## Available Scripts
 
