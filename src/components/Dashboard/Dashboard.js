@@ -88,7 +88,7 @@ const Dashboard = props => {
               </li>
             ))
           ) : (
-            <>{!isError && <li>Nenhum item encontrado</li>}</>
+            <>{!isError && <li>No items found</li>}</>
           )}
         </ul>
       )}
