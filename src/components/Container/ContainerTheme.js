@@ -3,7 +3,8 @@ const ContainerTheme = theme => ({
     flexGrow: 1,
     padding: theme.spacing.unit * 3,
     height: '100vh',
-    overflow: 'auto'
+    overflow: 'auto',
+    alignItems: 'center'
   },
   appBarSpacer: theme.mixins.toolbar
 });
