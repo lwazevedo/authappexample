@@ -4,7 +4,7 @@ import { AuthContext } from '../../containers';
 
 const Home = () => {
   const { authBody } = useContext(AuthContext);
-  const { username } = JSON.parse(authBody);
+  const { username } = JSON.parse(authBody) || '';
   return (
     <div>
       <h2>Bem Vindo {username} </h2>

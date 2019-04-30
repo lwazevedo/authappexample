@@ -12,10 +12,18 @@ const Dashboard = props => {
       props.history.push('/');
     });
   };
+
+  const autChecked = async () => {
+    const x = await authService.testing()
+    if (x) {
+      console.log(x)
+    }
+  }
   return (
     <div>
       <h2>Dashboard</h2>
       <button onClick={autLogout}>Logout</button>
+      <button onClick={autChecked}>autChecked</button>
       <Link to='/home'>Home</Link>
     </div>
   );

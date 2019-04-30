@@ -3,6 +3,11 @@ import { AuthContext } from '../index';
 import { withRouter } from 'react-router-dom';
 import authService from '../../services/authService';
 
+const userData = {
+  email: 'lwnazevedo@gmail.com',
+  password: 'senha123'
+}
+
 const AuthPage = props => {
   const { setAuthenticated, authenticated } = useContext(AuthContext);
 
@@ -11,7 +16,8 @@ const AuthPage = props => {
   }, [authenticated]);
 
   const authIn = () => {
-    authService.singIn().then(() => {
+
+    authService.singIn(userData).then(() => {
       setAuthenticated(true);
       props.history.push('/home');
     });
